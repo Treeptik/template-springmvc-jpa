@@ -25,48 +25,45 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div></div>
 
-		<div class="page-header" id="banner">
-			<div class="col-lg-6">
-				<h1>CloudUnit Template with Spring MVC / JPA</h1>
-			</div>
+	<div class="page-header" id="banner">
+		<div class="col-lg-6">
+			<h1>CloudUnit Template with Spring MVC / JPA</h1>
 		</div>
+	</div>
 
-		<div class="bs-docs-section">
-			<div class="col-lg-8">
-				<div class="page-header">
-					<h2 id="tables">Create a new Entity</h2>
-				</div>
-				<div class="col-lg-4">
+	<div></div>
+	<div class="col-lg-8">
+		<div class="page-header">
+			<h2 id="tables">Create a new Entity</h2>
+		</div>
+		<div class="col-lg-4">
 
 
-					<form:form action="index.do" commandName="toDo" method="POST">
+			<form:form action="index.do" commandName="toDo" method="POST">
 
-						<table>
+				<table>
 
-							<tr>
-								<td>Name :</td>
-								<td><form:input path="name" /> <form:errors path="name" /></td>
-							</tr>
+					<tr>
+						<td>Name :</td>
+						<td><form:input path="name" /></td>
+					</tr>
 
-							<tr>
-								<td>Date :</td>
-								<td><form:input path="date" placeholder="JJ/MM/AAAA" /> <form:errors
-										path="date" /></td>
-							</tr>
+					<tr>
+						<td>Date :</td>
+						<td><form:input path="date" placeholder="JJ/MM/AAAA" /></td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="Submit"></td>
 
-							<!-- 							<tr> -->
-							<td colspan="2"><input type="submit" value="Submit"></td>
+						<td><button type="button" class="btn btn-info">Help</button></td>
+					</tr>
 
-							<td align="right"><button type="button" class="btn btn-info">Help</button></td>
-							<br>
-							<br>
-							<!-- 							</tr> -->
-						</table>
+				</table>
 
-					</form:form>
-				</div>
-			</div>
+			</form:form>
+		</div>
+	</div>
 </body>
 </html>

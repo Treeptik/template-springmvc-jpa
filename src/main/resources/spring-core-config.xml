@@ -25,9 +25,16 @@
 
 	<!-- DataSource configuration for the tomcat jdbc connection pool See here 
 		for more details on commons-dbcp versus tomcat-jdbc: http://blog.ippon.fr/2013/03/13/improving-the-performance-of-the-spring-petclinic-sample-application-part-3-of-5/ -->
-	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource"
-		p:driverClassName="${jdbc.driverClassName}" p:url="${jdbc.url}"
-		p:username="${jdbc.username}" p:password="${jdbc.password}" />
+	<!-- <bean id="dataSource" p:class="${jdbc.className}" -->
+	<!-- p:driverClassName="${jdbc.driverClassName}" p:url="${jdbc.url}" -->
+	<!-- p:username="${jdbc.username}" p:password="${jdbc.password}" /> -->
+
+	<bean id="dataSource" class="${jdbc.className}">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
 
 
 	<context:component-scan base-package="fr.treeptik" />
@@ -42,7 +49,8 @@
 		p:dataSource-ref="dataSource">
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"
-				p:database="${jpa.database}" p:showSql="${jpa.showSql}" />
+				p:database="${jpa.database}" p:showSql="${jpa.showSql}"
+				p:generateDdl="${jpa.generateDdl}" />
 			<!-- the 'database' parameter refers to the database dialect being used. 
 				By default, Hibernate will use a 'HSQL' dialect because 'jpa.database' has 
 				been set to 'HSQL' inside file spring/data-access.properties -->
@@ -65,8 +73,7 @@
 	<bean
 		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 
-	<jpa:repositories
-		base-package="fr.treeptik.dao" />
+	<jpa:repositories base-package="fr.treeptik.dao" />
 
 
 </beans>

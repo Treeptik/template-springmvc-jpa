@@ -21,8 +21,11 @@ public class ToDoServiceImpl implements ToDoService {
 	@Override
 	@Transactional
 	public void add(ToDo toDo) throws ServiceException {
-
-		toDoDao.save(toDo);
+		try {
+			toDoDao.save(toDo);
+		} catch (Exception e) {
+			throw new ServiceException(e.getMessage(), e);
+		}
 	}
 
 	@Override
@@ -31,25 +34,30 @@ public class ToDoServiceImpl implements ToDoService {
 		List<ToDo> toDos = new ArrayList<>();
 		try {
 			toDos = toDoDao.findAll();
-			
 		} catch (Exception e) {
 			throw new ServiceException(e.getMessage(), e);
 		}
-		
+
 		return toDos;
 	}
 
 	@Override
 	public ToDo get(Integer id) throws ServiceException {
-
-		return toDoDao.findOne(id);
+		try {
+			return toDoDao.findOne(id);
+		} catch (Exception e) {
+			throw new ServiceException(e.getMessage(), e);
+		}
 	}
 
 	@Override
 	@Transactional
 	public void delete(Integer id) throws ServiceException {
-
-		toDoDao.delete(id);
+		try {
+			toDoDao.delete(id);
+		} catch (Exception e) {
+			throw new ServiceException(e.getMessage(), e);
+		}
 	}
 
 }
