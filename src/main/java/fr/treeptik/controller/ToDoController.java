@@ -19,15 +19,6 @@ public class ToDoController {
 	@Autowired
 	private ToDoService toDoService;
 
-	@RequestMapping(value = "/todo.do", method = RequestMethod.GET)
-	public String initToDo() {
-
-		System.out.println("Hello");
-
-		return "hello";
-
-	}
-
 	@RequestMapping(value = "/index.do", method = RequestMethod.GET)
 	public ModelAndView initForm() {
 

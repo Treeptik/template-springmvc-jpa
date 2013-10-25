@@ -28,7 +28,7 @@
 		</div>
 	</div>
 
-	</div>
+
 	<div class="bs-docs-section">
 		<div class="col-lg-8">
 			<div class="page-header">
