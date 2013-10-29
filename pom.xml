@@ -19,7 +19,7 @@
 		<h2database.version>1.3.174</h2database.version>
 		<log4j.version>1.2.17</log4j.version>
 		<slf4j.version>1.7.5</slf4j.version>
-		
+
 
 	</properties>
 
@@ -89,18 +89,55 @@
 
 	</dependencies>
 
+	<profiles>
+		<profile>
+			<id>DEV</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<log.severity>DEBUG</log.severity>
+				<application.log.severity>WARN</application.log.severity>
+				<jdbc.driverClassName>org.h2.Driver</jdbc.driverClassName>
+				<jdbc.url>jdbc\:h2\:mem\:test;MODE\=Oracle;DB_CLOSE_DELAY\=-1;DB_CLOSE_ON_EXIT\=FALSE</jdbc.url>
+				<jdbc.username>sa</jdbc.username>
+				<jdbc.password></jdbc.password>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>CLOUDUNIT</id>
+			<properties>
+				<log.severity>WARN</log.severity>
+				<application.log.severity>WARN</application.log.severity>
+				<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+				<jdbc.url></jdbc.url>
+				<jdbc.username></jdbc.username>
+				<jdbc.password></jdbc.password>
+			</properties>
+		</profile>
+	</profiles>
+
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${maven.compiler.plugin}</version>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.compiler.plugin}</version>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</build>
 
 </project>
