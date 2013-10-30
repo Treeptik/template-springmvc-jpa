@@ -7,14 +7,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Home</title>
+<link rel="stylesheet" href="css/bootstrap.css" media="screen">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="../bower_components/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
+<title>HOME</title>
 </head>
 <body>
 
 	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="../" class="navbar-brand">CloudUnit</a>
+				<a href="../" class="navbar-brand" style="FONT-SIZE: xx-large;">CloudUnit</a>
 				<!-- 				<button class="navbar-toggle" type="button" data-toggle="collapse" -->
 				<!-- 					data-target="#navbar-main"> -->
 				<!-- 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span -->
@@ -28,17 +34,17 @@
 	<div></div>
 
 	<div class="page-header" id="banner">
-		<div class="col-lg-6">
-			<h1>CloudUnit Template with Spring MVC / JPA</h1>
+		<div class="col-lg-6" style="FONT-SIZE: small;">
+			<h1 style="FONT-SIZE: x-large;">Recording a ToDo</h1>
 		</div>
 	</div>
 
-	<div></div>
-	<div class="col-lg-8">
-		<div class="page-header">
-			<h2 id="tables">Create a new Entity</h2>
-		</div>
-		<div class="col-lg-4">
+<!-- 	<div></div> -->
+<!-- 	<div class="col-lg-8"> -->
+<!-- 		<div class="page-header"> -->
+<!-- 			<h2 id="tables" style="FONT-SIZE: large;">Recording a toDo</h2> -->
+<!-- 		</div> -->
+<!-- 		<div class="col-lg-4"> -->
 
 
 			<form:form action="index.do" commandName="toDo" method="POST">
@@ -54,10 +60,11 @@
 						<td>Date :</td>
 						<td><form:input path="date" placeholder="JJ/MM/AAAA" /></td>
 					</tr>
+					
 					<tr>
+					
 						<td><input type="submit" value="Submit"></td>
 
-						<td><button type="button" class="btn btn-info">Help</button></td>
 					</tr>
 
 				</table>

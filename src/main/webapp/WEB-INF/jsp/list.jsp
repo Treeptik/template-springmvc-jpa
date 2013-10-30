@@ -7,6 +7,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/bootstrap.css" media="screen">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="../bower_components/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
 <title>List</title>
 </head>
 <body>
@@ -14,25 +20,29 @@
 	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="../" class="navbar-brand">CloudUnit</a>
+				<a href="../" class="navbar-brand" style="FONT-SIZE: x-large;">CloudUnit</a>
 				<button class="navbar-toggle" type="button" data-toggle="collapse"
 					data-target="#navbar-main">
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
 			</div>
-
-
-			<br> <br>
-			<button type="button" class="btn btn-info">Help</button>
 		</div>
 	</div>
 
+<br> <br>
+	<div>
+		
+		<button type="button" class="btn btn-info">Documentation</button>
+
+	</div>
 
 	<div class="bs-docs-section">
 		<div class="col-lg-8">
 			<div class="page-header">
-				<h2 id="tables">List of Entities</h2>
+				<h2 id="tables">ToDo List</h2>
+				<br>
+				<br>
 
 				<table class="table table-striped table-bordered table-hover">
 					<tr>
