@@ -13,7 +13,7 @@
       <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>
       <script src="../bower_components/bootstrap/assets/js/respond.min.js"></script>
     <![endif]-->
-<title>List</title>
+<title>ToDo List</title>
 </head>
 <body>
 
@@ -23,24 +23,32 @@
 				<a href="../" class="navbar-brand" style="FONT-SIZE: x-large;">CloudUnit</a>
 				<button class="navbar-toggle" type="button" data-toggle="collapse"
 					data-target="#navbar-main">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
 				</button>
 			</div>
 		</div>
 	</div>
+	
+	<div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+          		<li>
+             		 <a href="../help/">Help</a>
+           		</li>
+          </ul>
+    </div>
 
-<br> <br>
+	<br> 
+	<br>
 	<div>
-		
 		<button type="button" class="btn btn-info">Documentation</button>
-
 	</div>
-
+	
 	<div class="bs-docs-section">
 		<div class="col-lg-8">
 			<div class="page-header">
-				<h2 id="tables">ToDo List</h2>
+				<h1 id="tables" style="FONT-SIZE: xx-large;">ToDo List</h1>
 				<br>
 				<br>
 
@@ -56,11 +64,8 @@
 							<td>${t.name}</td>
 							<td>${t.date}</td>
 							<td><a href="delete.do?id=${t.id}">Delete</a></td>
-
 						</tr>
-
 					</c:forEach>
-
 				</table>
 			</div>
 		</div>
