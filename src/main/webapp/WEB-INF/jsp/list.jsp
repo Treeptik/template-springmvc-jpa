@@ -6,8 +6,10 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootswatch.min.css">
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
       <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>
@@ -20,35 +22,18 @@
 	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="../" class="navbar-brand" style="FONT-SIZE: x-large;">CloudUnit</a>
-				<button class="navbar-toggle" type="button" data-toggle="collapse"
-					data-target="#navbar-main">
-					<span class="icon-bar"></span> 
-					<span class="icon-bar"></span> 
-					<span class="icon-bar"></span>
-				</button>
+				<a href="../" class="navbar-brand" style="FONT-SIZE: xx-large;">CloudUnit</a>
+			</div>
+			<div class="navbar-collapse collapse" id="navbar-main">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="http://blog.treeptik.fr/" target="_blank">Documentation</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
-	
-	<div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-          		<li>
-             		 <a href="../help/">Help</a>
-           		</li>
-          </ul>
-    </div>
 
-	<br> 
-	<br>
-	<div>
-		<button type="button" class="btn btn-info">Documentation</button>
-	</div>
 	
-	<div class="bs-docs-section">
-		<div class="col-lg-8">
-			<div class="page-header">
-				<h1 id="tables" style="FONT-SIZE: xx-large;">ToDo List</h1>
+				<h1>ToDo List</h1>
 				<br>
 				<br>
 
@@ -63,13 +48,10 @@
 							<td>${t.id}</td>
 							<td>${t.name}</td>
 							<td>${t.date}</td>
-							<td><a href="delete.do?id=${t.id}">Delete</a></td>
+							<td><a class="btn btn-default" href="delete.do?id=${t.id}">Delete</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-			</div>
-		</div>
-	</div>
-
+		
 </body>
 </html>
