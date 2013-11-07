@@ -4,7 +4,9 @@ This is a template for a web application that uses SpringMVC and JPA. The sample
 
 <h2>How to use the template</h2>
 
-You received by email informations about the database you will use:
+You need to configure your database access.
+
+To do this you need to change some informations in the pom.xml file, in the profil section:
 
 <ul>
 <li>jpa url</li>
@@ -12,6 +14,8 @@ You received by email informations about the database you will use:
 <li>jpa password</li>
 </ul>
 
-You need to change this informations in the pom.xml file, in the profil section.
 
 
+**For CloudUnit users:
+
+You received these informations by email when you have added a MySQL module.
