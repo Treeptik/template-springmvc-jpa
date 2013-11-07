@@ -16,6 +16,6 @@ To do this you need to change some informations in the pom.xml file, in the prof
 
 
 
-**For CloudUnit users:
+** For CloudUnit users: **
 
 You received these informations by email when you have added a MySQL module.
