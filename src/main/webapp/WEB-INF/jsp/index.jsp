@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	
-		<h1> Create Todo</h1>
+		<h1> Create a Todo</h1>
 		<br>
 		<br>
 		
@@ -51,7 +51,7 @@
 				<br />
 				<div class="form-group">
 					<div class="col-lg-10 col-lg-offset-2">
-						<button type="submit" class="btn btn-primary" >Submit</button>
+						<button type="submit" class="btn btn-primary" >Create</button>
 						<a href="list.do"><button type="button" class="btn btn-primary">ToDo List</button></a>
 					</div>
 				</div>

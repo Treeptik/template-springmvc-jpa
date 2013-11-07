@@ -116,11 +116,11 @@
 				</resources>
 			</build>
 			<properties>
-				<jdbc.className>org.springframework.jdbc.datasource.SimpleDriverDataSource</jdbc.className>
-				<jdbc.driverClassName>org.h2.Driver</jdbc.driverClassName>
-				<jdbc.url>jdbc:h2:mem:test;MODE=Oracle;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</jdbc.url>
-				<jdbc.username>sa</jdbc.username>
-				<jdbc.password></jdbc.password>
+				<jpa.className>org.springframework.jdbc.datasource.SimpleDriverDataSource</jpa.className>
+				<jpa.driverClassName>org.h2.Driver</jpa.driverClassName>
+				<jpa.url>jdbc:h2:mem:test;MODE=Oracle;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</jpa.url>
+				<jpa.username>sa</jpa.username>
+				<jpa.password></jpa.password>
 				<log.severity>DEBUG</log.severity>
 				<application.log.severity>DEBUG</application.log.severity>
 			</properties>
@@ -138,11 +138,11 @@
 				</resources>
 			</build>
 			<properties>
-				<jdbc.className>org.apache.commons.dbcp.BasicDataSource</jdbc.className>
-				<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
-				<jdbc.url></jdbc.url>
-				<jdbc.username></jdbc.username>
-				<jdbc.password></jdbc.password>
+				<jpa.className>org.apache.commons.dbcp.BasicDataSource</jpa.className>
+				<jpa.driverClassName>com.mysql.jdbc.Driver</jpa.driverClassName>
+				<jpa.url></jpa.url>
+				<jpa.username></jpa.username>
+				<jpa.password></jpa.password>
 				<log.severity>WARN</log.severity>
 				<application.log.severity>WARN</application.log.severity>
 			</properties>

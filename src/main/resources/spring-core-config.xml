@@ -33,11 +33,11 @@
 <!-- 	p:username="${jdbc.username}" p:password="${jdbc.password}" /> -->
 
 
-	<bean id="dataSource" class="${jdbc.className}">
-	<property name="driverClass" value="${jdbc.driverClassName}" />
-	<property name="url" value="${jdbc.url}" />
-	<property name="username" value="${jdbc.username}" />
-	<property name="password" value="${jdbc.password}" />
+	<bean id="dataSource" class="${jpa.className}">
+	<property name="driverClass" value="${jpa.driverClassName}" />
+	<property name="url" value="${jpa.url}" />
+	<property name="username" value="${jpa.username}" />
+	<property name="password" value="${jpa.password}" />
 	</bean>
 
 	<!-- enables scanning for @Transactional annotations -->
