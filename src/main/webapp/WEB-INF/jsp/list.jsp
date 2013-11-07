@@ -52,6 +52,11 @@
 						</tr>
 					</c:forEach>
 				</table>
+				<div class="form-group">
+					<div class="col-lg-10 col-lg-offset-2">
+						<a href="index.do"><button class="btn btn-primary">Create a ToDo</button></a>
+					</div>
+				</div>
 		
 </body>
 </html>

@@ -52,6 +52,7 @@
 				<div class="form-group">
 					<div class="col-lg-10 col-lg-offset-2">
 						<button type="submit" class="btn btn-primary" >Submit</button>
+						<a href="list.do"><button type="button" class="btn btn-primary">ToDo List</button></a>
 					</div>
 				</div>
 			</form:form>
